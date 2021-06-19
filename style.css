@@ -1,0 +1,8 @@
+
+/* Media quary, as long as the screen is over 768px, the news-input custom class must have 
+    a 50% width from its original width */
+@media(min-width: 768px) {
+    news-input {
+        width: 50%;
+    }
+}
