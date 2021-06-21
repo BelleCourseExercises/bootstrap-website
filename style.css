@@ -1,4 +1,16 @@
 
+
+/* 
+    used a pseudo selector before; when using before/after, you have to specify the content as empty;
+    adds a ghost element of 60px to the body of the html file (which is the rest of the website) so that
+    the navbar doesn't cover the girl's head (in showcase section of website)
+*/
+body::before {
+    display: block;
+    content: '';
+    height: 60px;
+}
+
 /* Media quary, as long as the screen is over 768px, the news-input custom class must have 
     a 50% width from its original width */
 @media(min-width: 768px) {
