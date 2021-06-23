@@ -11,6 +11,16 @@ body::before {
     height: 60px;
 }
 
+
+/*
+    adds width and height to the map from mapbox, so that it actually appears on the site
+*/
+#map {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
 /* Media quary, as long as the screen is over 768px, the news-input custom class must have 
     a 50% width from its original width */
 @media(min-width: 768px) {

@@ -13,6 +13,9 @@
 
         <!--css link-->
         <link rel="stylesheet" href="style.css">
+
+        <!--API link for maps in the contact info section of the website (taken from mapbox)-->
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
         <title>Frontend Bootcamp</title>   
     </head>
     <body>
@@ -425,7 +428,50 @@
             </div>
         </section>
 
+
+
+
+
+
+
+        <!--CONTACT part of the website-->
+        <section class="p-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md">
+                        <h2 class="text-center mb-4">Contact Info</h2>
+
+                        <!--list-->
+                        <ul class="list-group list-group-flush lead">
+                            <li class="list-group-item"><span class="fw-bold">Main Location:</span> 50 Main St Boston Ma</li>
+                            <li class="list-group-item"><span class="fw-bold">Enrollment Phone:</span> (555) 555-5555</li>
+                            <li class="list-group-item"><span class="fw-bold">Student Phone:</span> (333) 333-3333</li>
+                            <li class="list-group-item"><span class="fw-bold">Enrollment Email: </span> enroll@frontendbc.test</li>
+                            <li class="list-group-item"><span class="fw-bold">Student Email: </span> student@frontendbc.test</li>
+                        </ul>
+                    </div>
+
+                    <!--Map -->
+                    <div class="col-md">
+                        <!--use map id based on the mapbox script at the bottom of the index.html to use it-->
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
         
+        <!--adding the map to the site using mapbox-->
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoiMWVtb25jYWtlIiwiYSI6ImNrcTliM2dsYzBiZncycG81dzlud3dwdXAifQ.Jo049RcdX6PQeU7imKdgbA';
+            var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [-71.060982, 42.35725],
+            zoom: 18
+            });
+        </script>
     </body>
 </html>
